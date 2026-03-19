@@ -19,6 +19,11 @@ jobs:
         channel: 'stable'
         cache: true
     
+    - name: Create local.properties
+      run: |
+        echo "sdk.dir=$HOME/flutter/bin/cache/android-sdk" > android/local.properties
+        echo "flutter.sdk=$HOME/flutter" >> android/local.properties
+    
     - run: flutter pub get
     
     - name: Build Android APK
