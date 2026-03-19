@@ -108,7 +108,7 @@ class _StatisticsScreenState extends State<StatisticsScreen> {
         summary = '今日 小便 $peeCount 次 / 大便 $poopCount 次';
         break;
       case RecordType.sleep:
-        final totalMinutes = records.fold<int>(0, (sum, r) => sum + (r.data['duration'] ?? 0));
+        final totalMinutes = records.fold<int>(0, (sum, r) => sum + ((r.data['duration'] ?? 0) as int));
         final hours = totalMinutes ~/ 60;
         final minutes = totalMinutes % 60;
         summary = '今日睡眠 ${hours}小时${minutes}分钟';

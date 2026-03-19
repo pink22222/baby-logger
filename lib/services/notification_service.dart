@@ -82,8 +82,8 @@ class NotificationService {
   }
 
   tz.TZDateTime _nextInstanceOfTime(int hour, int minute, List<int> weekdays) {
-    final now = tz.TZDateTime.now(local);
-    var scheduledDate = tz.TZDateTime(local, now.year, now.month, now.day, hour, minute);
+    final now = tz.TZDateTime.now(tz.local);
+    var scheduledDate = tz.TZDateTime(tz.local, now.year, now.month, now.day, hour, minute);
 
     if (scheduledDate.isBefore(now)) {
       scheduledDate = scheduledDate.add(const Duration(days: 1));
