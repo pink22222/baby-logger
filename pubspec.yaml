@@ -23,8 +23,8 @@ dependencies:
   fl_chart: ^0.66.0
   # 图片
   image_picker: ^1.0.4
-  # 通知提醒
-  flutter_local_notifications: ^16.1.0
+  # 通知提醒 - 固定版本避免兼容性问题
+  flutter_local_notifications: 16.1.2
   timezone: ^0.9.2
   # 时间格式化
   intl: ^0.18.1
