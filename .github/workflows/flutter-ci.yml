@@ -8,8 +8,8 @@ on:
   workflow_dispatch:
 
 jobs:
-  build:
-    runs-on: macos-latest
+  build-android:
+    runs-on: ubuntu-latest
     
     steps:
     - uses: actions/checkout@v4
@@ -21,19 +21,12 @@ jobs:
     
     - run: flutter pub get
     
-    - name: Build iOS
-      run: flutter build ios --release --no-codesign
-      env:
-        FLUTTER_ROOT: ${{ env.FLUTTER_ROOT }}
-    
     - name: Build Android APK
       run: flutter build apk --release
     
-    - name: Upload artifacts
+    - name: Upload APK
       uses: actions/upload-artifact@v4
       with:
-        name: app-packages
-        path: |
-          build/app/outputs/flutter-apk/app-release.apk
-          build/app/outputs/ios/iphonesimulator/Runner.app
+        name: baby-logger-apk
+        path: build/app/outputs/flutter-apk/app-release.apk
         retention-days: 7
