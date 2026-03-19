@@ -1,0 +1,35 @@
+# Flutter
+*.lock
+.dart_tool/
+.flutter-plugins
+.flutter-plugins-dependencies
+.packages
+.pub-cache/
+.pub/
+build/
+
+# IDE
+.idea/
+.vscode/
+*.iml
+
+# Android
+android/.gradle/
+android/app/build/
+android/build/
+
+# iOS
+ios/Pods/
+ios/.symlinks/
+ios/Flutter/Flutter.framework
+ios/Flutter/Flutter.podspec
+ios/Flutter/App.framework
+ios/Flutter/Runner.xcworkspace
+*.xcworkspace
+
+# macOS
+macos/Flutter/GeneratedPluginRegistrant.swift
+
+# Misc
+*.log
+.flutter
